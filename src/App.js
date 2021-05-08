@@ -3,7 +3,8 @@ import './App.css';
 import SearchResults from "./Components/SearchResults";
 import Search from "./Components/Search";
 import Heading from "./Components/Heading";
-import Nominate from "./Components/Nominate"
+import Nominate from "./Components/Nominate";
+import RemoveNomination from "./Components/RemoveNomination";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -27,6 +28,13 @@ function App() {
     setNominatedMovies(nominatedList)
     console.log(nominatedList)
   }
+
+  function removeNomination(movie){
+    const nominatedList = nominatedMovies.filter(
+      (nominatedMovie) => nominatedMovie.imdbID !== movie.imdbID);
+      setNominatedMovies(nominatedList)
+  
+  }
   useEffect(() => {
     getMovies(searchValue);
   }, [searchValue])
@@ -42,6 +50,16 @@ function App() {
         movies={movies} 
         addToNominatedList={Nominate}
         handleNominationClick={nominateMovie}/>
+      </div>
+      <div className="row d-flex align-items-center mt-4 mb-4">
+        <Heading heading="Nominated Movies"/>
+      </div>
+      <div className='row'>
+        <SearchResults 
+        movies={nominatedMovies} 
+        addToNominatedList={RemoveNomination}
+        handleNominationClick={removeNomination}
+        />
       </div>
     </div>
   );
