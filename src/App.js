@@ -58,28 +58,37 @@ function App() {
 
   
   return (
-    <div className="container-fluid App">
+    <>
+    <div className="container fluid">
         <Heading heading="The Shoppies"/>
-      <div className="row d-flex align-items-center mt-4 mb-4">
+      <div className="row" id="searchBar">
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
-      <div className="row">
-        <SearchResults 
-        movies={movies} 
-        addToNominatedList={Nominate}
-        handleNominationClick={nominateMovie}/>
-      </div>
-      <div className="row d-flex align-items-center mt-4 mb-4">
-        <Heading heading="Nominated Movies"/>
-      </div>
-      <div className='row'>
-        <SearchResults 
-        movies={nominatedMovies} 
-        addToNominatedList={RemoveNomination}
-        handleNominationClick={removeNomination}
-        />
-      </div>
     </div>
+    <div className="container" id="scroll">
+      <div className="row row-cols-1 row-cols-md-3 g-2 gx-3" id="results">
+            <SearchResults 
+              movies={movies} 
+              addToNominatedList={Nominate}
+              handleNominationClick={nominateMovie}
+              />
+        </div>
+    </div>
+    <div className="container">
+        <div className="row " id="nominatedBar">
+          <Heading heading="Nominated Movies"/>
+        </div>
+    </div>
+    <div className="container" id="scroll">
+      <div className='row row-cols-1 row-cols-md-3 g-2 gx-3' id="results">
+          <SearchResults 
+            movies={nominatedMovies} 
+            addToNominatedList={RemoveNomination}
+            handleNominationClick={removeNomination}
+            />
+        </div>
+      </div>
+    </>
   );
 }
 

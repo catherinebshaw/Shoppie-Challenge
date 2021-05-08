@@ -1,19 +1,24 @@
 import React from "react";
+import "./style.css"
 
-function searchResults(props){
+function searchResults(props) {
     const AddToNominatedList = props.addToNominatedList;
-    return(
+    return (
         <>
-        {props.movies.map((movie,index) => (
-            <div className="image-container d-flex justify-content-start m-3">
-                <img src={movie.Poster} alt={movie.Title}/>
-                <div 
-                onClick={() =>props.handleNominationClick(movie)}
-                className='overlay d-flex align-items-center justify-content-center'>
-                <AddToNominatedList/>
+            {props.movies.map((movie, index) => (
+                <div classname="col">
+                    <div key={movie.imdbID} className="image-container" id="moviePoster">
+                        <img src={movie.Poster} alt={movie.Title} className="image" />
+                        <p id="year">({movie.Year})</p>
+                        <div
+                            onClick={() => props.handleNominationClick(movie)}
+                            className='overlay centered'>
+                            <AddToNominatedList />
+                        </div>
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))}
+
         </>
     );
 };

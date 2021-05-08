@@ -1,0 +1,23 @@
+.image-container{
+    max-width: 18rem;
+    height: auto;
+    margin: 3px;
+    border: none;
+    background: transparent;
+}
+#image{
+    max-width: 90%;
+}
+#moviePoster {
+    max-width: 18rem;
+    height: auto;
+}
+
+#year {
+    color: darkslategray;
+    background: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+
