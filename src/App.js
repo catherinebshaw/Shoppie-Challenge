@@ -8,9 +8,17 @@ import RemoveNomination from "./Components/RemoveNomination";
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState('The Matrix');
   const [nominatedMovies, setNominatedMovies] = useState([]);
 
+  useEffect(() => {
+    const json = localStorage.getItem("nominatedMovies");
+    const savedMovies = JSON.parse(json);
+  if (savedMovies){
+    setNominatedMovies(savedMovies);
+  }
+  }, [])
+  
   async function getMovies(searchValue){
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=df7ad2d3`;
     console.log(`searching for ${searchValue}`, searchValue)
@@ -18,14 +26,20 @@ function App() {
     const response = await fetch(url);
     const responseJson = await response.json();
     console.log(responseJson);
+    
     if(responseJson.Search){
       setMovies(responseJson.Search);
-    }
+    };
+
   };
+  
+  useEffect(() => {
+    getMovies(searchValue); 
+  }, [searchValue])
 
   function nominateMovie(movie){
     const nominatedList = [...nominatedMovies, movie];
-    setNominatedMovies(nominatedList)
+    setNominatedMovies(nominatedList);
     console.log(nominatedList)
   }
 
@@ -33,12 +47,16 @@ function App() {
     const nominatedList = nominatedMovies.filter(
       (nominatedMovie) => nominatedMovie.imdbID !== movie.imdbID);
       setNominatedMovies(nominatedList)
-  
+      console.log(nominatedList)
   }
+ 
   useEffect(() => {
-    getMovies(searchValue);
-  }, [searchValue])
+    const json = JSON.stringify(nominatedMovies);
+    localStorage.setItem("nominatedMovies", json)
+  },[nominatedMovies]);
 
+
+  
   return (
     <div className="container-fluid App">
         <Heading heading="The Shoppies"/>
