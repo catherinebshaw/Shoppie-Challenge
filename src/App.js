@@ -18,9 +18,9 @@ function App() {
     setNominatedMovies(savedMovies);
   }
   }, [])
-  
+
   async function getMovies(searchValue){
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=df7ad2d3`;
+    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=df7ad2d3`;
     console.log(`searching for ${searchValue}`, searchValue)
 
     const response = await fetch(url);
