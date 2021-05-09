@@ -29,7 +29,9 @@ The challenge was to build a webpage that can:
 * Create shareable links
 
 ## Technology Used
-The application is built in React.js using the OMDB API for search results. Information is served via HTML and styled using CSS and Bootstrap5.0. The application has been deployed on Heroku.
+The application is built in React.js using the OMDB API for search results. Information is served via HTML and styled using CSS and Bootstrap5.0. The application has been deployed on Heroku. 
+
+The easiest way to access the site is to click on the link below under "Live Site". If accessing through original code, please open the SRC folder in the terminal and type "npm start". 
 
 ## Results
 This was a really fun challenge and I am quite happy  with how the site turned out. Considering I only started coding four months ago and only started using React and Node two months ago, I am really pleased with how much I have learned and how much of that learning I am able to apply. There is still a lot more to learn and I am keen to find an opportunity where I can continue to develop this new skill and knowledge base. 
