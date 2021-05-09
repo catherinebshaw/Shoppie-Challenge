@@ -1,0 +1,15 @@
+#header{
+    height: 200px;
+    display: flex;
+    justify-content:flex-start;
+    color:gold;
+    padding: 20px;
+    background-image: url(../images/Winner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin-bottom: 5px;
+}
+h1{
+    font-size: 60pt;
+    font-weight:bolder;
+}

@@ -5,17 +5,13 @@ body {
   color:darkslategrey;
 }
 
-h1{
-  font-size: 40pt;
-  font-weight: bold;
-}
 #searchBar{
   display:flex;
 }
 
 #nominatedBar{
   padding: 5px;
-  margin-top: 15px;
+  margin-top: 10px;
   display:flex;
 }
 

@@ -1,0 +1,12 @@
+#footer {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    border: 2pt solid darkslategrey;
+    background: darkslategrey;
+    color: gold;
+    margin-bottom: 0;
+    font-size: 24pt;
+    text-align: center;
+  
+}

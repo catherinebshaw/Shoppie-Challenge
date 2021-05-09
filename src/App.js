@@ -1,11 +1,13 @@
 import React, { useState, useEffect} from 'react';
 import './App.css';
+import Header from "./Components/Header"
 import SearchResults from "./Components/SearchResults";
 import Search from "./Components/Search";
-import Heading from "./Components/Heading";
+import SectionHeader from "./Components/SectionHeader";
 import Nominate from "./Components/Nominate";
 import RemoveNomination from "./Components/RemoveNomination";
 import Banner from "./Components/Banner"
+import Footer from "./Components/Footer"
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -65,7 +67,7 @@ function App() {
   return (
     <>
     <div className="container-fluid">
-        <Heading heading="The Shoppies"/>
+        <Header header="The Shoppies"/>
       <div className="row" id="searchBar">
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
@@ -81,7 +83,7 @@ function App() {
     </div>
     <div className="container-fluid">
         <div className="row " id="nominatedBar">
-          <Heading heading="Nominated Movies"/>
+          <SectionHeader heading="Nominated Movies"/>
           <Banner/>
         </div>
     </div>
@@ -94,6 +96,7 @@ function App() {
             />
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
