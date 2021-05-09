@@ -2,7 +2,11 @@
 This application was part of an application for a Shopify Developer Internship. Applicants were asked to create an application to search IMDB for movies with the ability to save and delete favourite movies from local storage. 
 
 ## User Experience
-In this application, users are given an opportunity to search the IMDB database for a variety of movies. Every search returns 10 possible movies. Since the application is built in REACT, the search returns options as the user types. The results of the search are presented in a scroll container and users can search for movies they would like to nominate for Shopify's new Shoppie award. To nominate, users hover over the movie and click the overlay. Nominated movies appear in a second scrollable container under the banner "Nominated". Once five (5) movies have been nominated, a banner appears congratulating the user. Movies can also be removed from the Nominated section by again hovering over the movie until an overlay appears. Nominated movies are saved in Local Storage so they will persist if the browser is closed or refreshed. 
+In this application, users are given an opportunity to search the IMDB database for a variety of movies. Upon loading, users are presented with a default search for "The Matrix". Users are able to enter a new search in the search bar below the header. Every search returns posters for 10 possible movies which are presented in a scroll container titled "Search Results". Users can scroll and find movies they would like to nominate for Shopify's new Shoppie award. Search results are immediately updated with any change made in the search bar.
+
+To nominate a movie, users hover over the movie poster and click the overlay when it appears. Hovering over the icons in the overlay will trigger an animation effect. Nominated movies appear in a second scrollable container under the heading "Nominated". Once five (5) movies have been nominated, a banner appears congratulating the user. Movies can also be removed from the Nominated section by again hovering over the movie until an overlay appears. 
+
+Nominated movies are saved in Local Storage so they will persist if the browser is closed or refreshed. 
 
 ## The Challenge:
 The challenge was to build a webpage that can:
@@ -25,10 +29,13 @@ The challenge was to build a webpage that can:
 * Create shareable links
 
 ## Technology Used
-The application is built in React.js and information is served via HTML and styled using CSS. The application has been deployed on Heroku.
+The application is built in React.js using the OMDB API for search results. Information is served via HTML and styled using CSS and Bootstrap5.0. The application has been deployed on Heroku.
+
+## Results
+This was a really fun challenge and I am quite happy  with how the site turned out. Considering I only started coding four months ago and only started using React and Node two months ago, I am really pleased with how much I have learned and how much of that learning I am able to apply. There is still a lot more to learn and I am keen to find an opportunity where I can continue to develop this new skill and knowledge base. 
 
 ## Mock Up
-![The Shoppies Movie Nomination Site]()
+![The Shoppies Movie Nomination Site](https://github.com/catherinebshaw/Shoppie-Challenge/blob/main/public/Assets/Shoppies-ScreenShot.png)
 
 ## Live Site
-[Shoppie](https://shrouded-lowlands-97207.herokuapp.com/)
+[Shoppie Site on Heroku](https://shrouded-lowlands-97207.herokuapp.com/)
