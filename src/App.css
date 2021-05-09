@@ -1,24 +1,23 @@
 body {
-
   background-image: url('./Components/images/Background2.jpeg');
   background-repeat: no-repeat;
   background-size:cover;
   color:darkslategrey;
-  
 }
 
+h1{
+  font-size: 40pt;
+  font-weight: bold;
+}
 #searchBar{
   display:flex;
 }
 
-
 #nominatedBar{
+  padding: 5px;
+  margin-top: 15px;
   display:flex;
 }
-/* .App >.row {
-  overflow-x: auto;
-  flex-wrap: nowrap;
-} */
 
 #scroll{
   overflow: scroll;
@@ -29,35 +28,12 @@ body {
   margin-top:20px;
 }
 
-#moviePoster {
-  position: relative;
-  transition: transform 0.2s;
-}
 
-#moviePoster:hover {
-  cursor:pointer;
-  transform: scale(1.1);
-}
-#moviePoster:hover .overlay{
-  opacity:1;
-}
 
-.overlay{
-  position: absolute;
-  background: darkslategray;
-  width: 100%;
-  transition: 0.5s ease;
-  color: gold;
-  opacity: 0;
-  bottom: 0;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 75px
+#banner {
+background-color: firebrick;
+color: white;
+font-size: 20pt;
+font-weight: bold; 
+transition-duration: 1s;
 }

@@ -1,0 +1,13 @@
+#heartIcon {
+    color: red;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+  
+  #heartIcon:hover {
+    -webkit-transform: scale(3,3);
+      -moz-transform: scale(3,3);
+      transform: scale(3,3);
+  }
+  

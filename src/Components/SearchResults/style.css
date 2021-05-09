@@ -11,6 +11,8 @@
 #moviePoster {
     max-width: 18rem;
     height: auto;
+    position: relative;
+    transition: transform 0.2s;
 }
 
 #year {
@@ -19,5 +21,37 @@
     text-align: center;
     font-weight: bold;
 }
+  
+#moviePoster:hover {
+cursor:pointer;
+transform: scale(1.1);
+}
 
+#moviePoster:hover .image{
+opacity:0.3;
+}
+
+#moviePoster:hover .overlay{
+opacity:1;
+}  
+  
+.overlay {
+background: darkslategray;
+width: 90%;
+transition: 0.5s ease;
+color: gold;
+opacity: 0;
+font-size: 20px;
+padding: 10px;
+text-align: center;
+overflow-wrap: normal;
+}
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height: 75px
+}
+  
 
