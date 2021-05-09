@@ -72,29 +72,40 @@ function App() {
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
     </div>
-    <div className="container-fluid" id="scroll">
-      <div className="row row-cols-1 row-cols-md-4 g-2 gx-3" id="results">
+    <div className="row">
+      <div className="col-6">
+        <div className="container-fluid">
+            <div className="row " id="nominatedBar">
+              <SectionHeader heading="Search Results"/>
+            </div>
+        </div>
+        <div className="container-fluid" id="scroll">
+          <div className="row row-cols-1 row-cols-md-2 g-2 gx-3" id="results">
+              <SearchResults 
+                movies={movies} 
+                addToNominatedList={Nominate}
+                handleNominationClick={nominateMovie}
+                />
+          </div>
+        </div>
+      </div>
+      <div className="col-6">
+        <div className="container-fluid">
+            <div className="row " id="nominatedBar">
+              <SectionHeader heading="Nominated Movies"/>
+              <Banner/>
+            </div>
+        </div>
+        <div className="container-fluid" id="scroll">
+          <div className='row row-cols-1 row-cols-md-2 g-2 gx-3' id="results">
             <SearchResults 
-              movies={movies} 
-              addToNominatedList={Nominate}
-              handleNominationClick={nominateMovie}
+              movies={nominatedMovies} 
+              addToNominatedList={RemoveNomination}
+              handleNominationClick={removeNomination}
               />
+          </div>
         </div>
-    </div>
-    <div className="container-fluid">
-        <div className="row " id="nominatedBar">
-          <SectionHeader heading="Nominated Movies"/>
-          <Banner/>
-        </div>
-    </div>
-    <div className="container-fluid" id="scroll">
-      <div className='row row-cols-1 row-cols-md-4 g-2 gx-3' id="results">
-          <SearchResults 
-            movies={nominatedMovies} 
-            addToNominatedList={RemoveNomination}
-            handleNominationClick={removeNomination}
-            />
-        </div>
+      </div>
       </div>
       <Footer/>
     </>

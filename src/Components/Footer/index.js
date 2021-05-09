@@ -5,7 +5,7 @@ import { CgScrollV } from "react-icons/cg";
 
 function Footer(){
     return (
-        <p id="footer"><CgScrollV/> Please remember to scroll down each section to see more..... </p>
+        <p id="footer"><CgScrollV/> Please scroll down each section to see more..... </p>
     )
 }
 export default Footer
