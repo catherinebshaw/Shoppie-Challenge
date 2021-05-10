@@ -6,14 +6,12 @@ import Search from "./Components/Search";
 import SectionHeader from "./Components/SectionHeader";
 import Nominate from "./Components/Nominate";
 import RemoveNomination from "./Components/RemoveNomination";
-import Banner from "./Components/Banner"
 import Footer from "./Components/Footer"
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState('The Matrix');
   const [nominatedMovies, setNominatedMovies] = useState([]);
-
 
   useEffect(() => {
     const json = localStorage.getItem("nominatedMovies");
@@ -62,25 +60,22 @@ function App() {
     localStorage.setItem("nominatedMovies", json)
   },[nominatedMovies]);
 
-
-  
   return (
     <>
-    <div className="container-fluid">
+  
         <Header header="The Shoppies"/>
       <div className="row" id="searchBar">
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
-    </div>
     <div className="row">
-      <div className="col-6">
-        <div className="container-fluid">
-            <div className="row " id="nominatedBar">
+      <div className="col-sm">
+        <div className="container-sm">
+            <div className="row" id="nominatedBar">
               <SectionHeader heading="Search Results"/>
             </div>
         </div>
-        <div className="container-fluid" id="scroll">
-          <div className="row row-cols-1 row-cols-md-2 g-2 gx-3" id="results">
+        <div className="container-sm" id="scroll">
+          <div className="row row-cols-1 row-cols-md-2 g-2" id="results">
               <SearchResults 
                 movies={movies} 
                 addToNominatedList={Nominate}
@@ -89,15 +84,14 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="col-6">
-        <div className="container-fluid">
+      <div className="col-sm">
+        <div className="container-sm">
             <div className="row " id="nominatedBar">
               <SectionHeader heading="Nominated Movies"/>
-              <Banner/>
             </div>
         </div>
-        <div className="container-fluid" id="scroll">
-          <div className='row row-cols-1 row-cols-md-2 g-2 gx-3' id="results">
+        <div className="container-sm" id="scroll">
+          <div className='row row-cols-1 row-cols-md-2 g-2' id="results">
             <SearchResults 
               movies={nominatedMovies} 
               addToNominatedList={RemoveNomination}
@@ -113,3 +107,4 @@ function App() {
 }
 
 export default App;
+

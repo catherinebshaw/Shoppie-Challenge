@@ -5,10 +5,8 @@ import "./style.css"
 function RemoveNomination(){
     return(
         <>
-        <FaRegTrashAlt id="trashIcon" />
-        <span classname='mr-2'>   Remove from List  </span>
-
-    </>
+        <span classname='mr-2'><FaRegTrashAlt id="trashIcon" />   Remove from List  </span>
+        </>
     );
 };
 export default RemoveNomination;

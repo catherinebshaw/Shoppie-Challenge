@@ -6,14 +6,16 @@ function searchResults(props) {
     return (
         <>
             {props.movies.map((movie, index) => (
-                <div classname="col">
+                <div classname="col-sm">
                     <div key={movie.imdbID} className="image-container" id="moviePoster">
                         <img src={movie.Poster} alt={movie.Title} className="image" />
                         <p id="year">({movie.Year})</p>
                         <div
                             onClick={() => props.handleNominationClick(movie)}
-                            className='overlay centered'>
-                            <AddToNominatedList />
+                            className='overlay centered'
+                            // isDisabled={nominatedList.includes(movie.imdbID)}>
+                           >
+                        <AddToNominatedList/>
                         </div>
                     </div>
                 </div>

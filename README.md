@@ -4,7 +4,7 @@ This application was part of an application for a Shopify Developer Internship. 
 ## User Experience
 In this application, users are given an opportunity to search the IMDB database for a variety of movies. Upon loading, users are presented with a default search for "The Matrix". Users are able to enter a new search in the search bar below the header. Every search returns posters for 10 possible movies which are presented in a scroll container titled "Search Results". Users can scroll and find movies they would like to nominate for Shopify's new Shoppie award. Search results are immediately updated with any change made in the search bar.
 
-To nominate a movie, users hover over the movie poster and click the overlay when it appears. Hovering over the icons in the overlay will trigger an animation effect. Nominated movies appear in a second scrollable container under the heading "Nominated". Once five (5) movies have been nominated, a banner appears congratulating the user. Movies can also be removed from the Nominated section by again hovering over the movie until an overlay appears. 
+To nominate a movie, users hover over the movie poster and click the overlay when it appears. Hovering over the icons in the overlay will trigger an animation effect. Nominated movies appear in a second scrollable container under the heading "Nominated". Movies can also be removed from the Nominated section by again hovering over the movie until an overlay appears. 
 
 Nominated movies are saved in Local Storage so they will persist if the browser is closed or refreshed. 
 
@@ -34,7 +34,7 @@ The application is built in React.js using the OMDB API for search results. Info
 The easiest way to access the site is to click on the link below under "Live Site". If accessing through original code, please open the SRC folder in the terminal and type "npm start". 
 
 ## Results
-This was a really fun challenge and I am quite happy  with how the site turned out. Considering I only started coding four months ago and only started using React and Node two months ago, I am really pleased with how much I have learned and how much of that learning I am able to apply. There is still a lot more to learn and I am keen to find an opportunity where I can continue to develop this new skill and knowledge base. 
+This was a really fun challenge. I think I did fairly well and I hope you do too. I started coding four months ago and I started using React just two months ago. In that time, I have learned quite a bit and I am pleased with how much knowledge I am able to apply. Still, a couple items in the challenge were just out of reach and I am excited to learn how to complete these tasks and more.  
 
 ## Mock Up
 ![The Shoppies Movie Nomination Site](https://github.com/catherinebshaw/Shoppie-Challenge/blob/main/public/Assets/Shoppies-ScreenShot.png)
